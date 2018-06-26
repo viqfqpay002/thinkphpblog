@@ -28,9 +28,9 @@
      },
      methods: {
         logout:function(){
-           axios.get('./index/logOut').then(function(res){
+           axios.get('./admin/index/logOut').then(function(res){
                if(res.data.code==0){
-                window.location.href="./login"
+                window.location.href="/admin/login"
                }
            })
         }

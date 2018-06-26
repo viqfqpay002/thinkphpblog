@@ -27,7 +27,7 @@ var vm = new Vue({
             axios.post('./login/user',params,config).then(function(res){
                 if(res.status==200){
                     if(res.data.data.code=="01"){
-                        window.location.href="./";
+                        window.location.href="/Admin";
                         sessionStorage.setItem('uid',res.data.data.uid);
                     }else {
                         self.errinfo = res.data.data.msg

@@ -84,7 +84,7 @@ select{
     width: 10%;
     height: 100vh;
     background: #333;
-    color: $fff;
+    color: #fff;
     float: left;
     text-align: center
 }
@@ -121,4 +121,16 @@ table th,table td{
     right: 0;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1000;
+}
+.paging{
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px;
+}
+.paging ul li{
+    padding:0 10px;
+}
+.paging .active{
+    color: orange;
 }

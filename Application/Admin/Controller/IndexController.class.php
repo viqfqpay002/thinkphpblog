@@ -21,7 +21,7 @@ class IndexController extends BaseController
       $data['title'] = $_POST['title'];
       $data['content'] = $_POST['content'];
       $data['reg_time'] = $_POST['time'];
-      $imgUrl = $_POST['imgUrl'];
+      $data['imgurl'] = $_POST['imgUrl'];
       $form = D('center');
       if($form->create()){
           $forms = $form->add($data);
@@ -38,16 +38,16 @@ class IndexController extends BaseController
     {
       $model=M('center');
       $count=$model->count();
-      $page=new\Think\Page($count,5);//一页显示五条数据
+      $page=new\Think\Page($count,10);//一页显示五条数据
       $show = $page->show();
 
       $list=$model->limit($page->firstRow,$page->listRows)->select();//
         // $this->assign('list',$list);
         // $this->assign('show',$show);
-         // print_r($page);
+//        print_r($page);
         // $data = M('center');
         // $forms = $data->field('*')->select();
-         $arr = array("data"=>$list,"totleList"=>$page->totalRows,"pageSize"=>$page->listRows);
+         $arr = array("data"=>$list,"totleList"=>$page->totalRows,"pageSize"=>$page->listRows,"pagetotal"=>$page->totalPages);
          echo json_encode($arr);
         
     }

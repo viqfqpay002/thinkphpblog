@@ -105,10 +105,9 @@
                  params.append('cate', this.selectVal);
                  params.append('title', this.title);
                  params.append('content',this.uedit.getContent());
-                 params.append('imgUrl',this.imgs[0][0]);
+                 params.append('imgUrl',this.imgs);
                  params.append('time',new Date().Format("yyyy-MM-dd hh:mm:ss"));
-            var config = {headers: {'X-Requested-With': 'XMLHttpRequest'}}
-            console.log(this.uedit.getContent());
+            var config = {headers: {'X-Requested-With': 'XMLHttpRequest'}};
                  axios.post('./addForm',params,config).then(function(res){
                     if(res.data.status==1){
                         alert(res.data.msg);

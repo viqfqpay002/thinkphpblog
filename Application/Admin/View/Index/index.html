@@ -43,14 +43,13 @@
   </table>
   <span >{{emptyInfo}}</span>
   <div class="paging flex">
-      <a href="javascript:;">上一页</a>
-        <ul class="ul_box flex" v-for="item in pageSize">
-            <li class="item"><a href="javascript:;" @click="pageHandler(item)">{{item}}</a></li>
-           <!--  <li class="item"><a href="javascript:;">2</a></li>
-            <li class="item"><a href="javascript:;">3</a></li>
-            <li class="item"><a href="javascript:;">4</a></li> -->
+      <a href="javascript:;" @click="pageprev()">上一页</a>
+        <ul class="ul_box flex" >
+            <li class="item" v-for="item in pageSize">
+                <a href="javascript:;" @click="pageHandler(item)" :class="{'active':start==item}" >{{item}}</a>
+            </li>
         </ul>
-      <a href="javascript:;">下一页</a>
+      <a href="javascript:;" @click="pagenext()">下一页</a>
   </div>
   <div class="markBox" v-show="mark==true">
     <div class="edit_forms">
@@ -96,10 +95,12 @@
       newTitle:"",
       uedit:"",
       editId:"",
-      page:"",
-      total:"",
-      pageSize:""
+      page:"",//合计总条数
+      total:"", //每页显示条数
+      pageSize:"", //总页数
+      start:1//记录当前页码
     },
+       //页面初始化渲染
     beforeCreate:function(){
        var _self=this;
          axios.get('./Admin/index/fetchAll').then(function(res){
@@ -107,28 +108,61 @@
                  _self.items = res.data.data;
                  _self.page = res.data.totleList;
                  _self.total = res.data.pageSize;
-                 _self.pageSize = parseInt(_self.page/_self.total);
+                 _self.pageSize = res.data.pagetotal;
                  _self.emptyInfo=""
              }
            })
     },
     mounted: function(){
+        //实例化ueditor
          this.uedit= UE.getEditor('content');
     },
     methods:{
+        //分页操作
       pageHandler:function(pageid){
         var _self = this;
          axios.get('./Admin/index/fetchAll/p/'+pageid).then(function(res){
              if(res.data.data.length>0){
              _self.items = res.data.data;
+              _self.start = pageid;
              }
          })
       },
+        pageprev:function(){
+            if(this.start>1){
+                this.start--;
+                var _self = this;
+                axios.get('./Admin/index/fetchAll/p/'+this.start).then(function(res){
+                    if(res.data.data.length>0){
+                        _self.items = res.data.data;
+                    }
+                })
+            }else {
+                this.start=1;
+            }
+        },
+        pagenext:function(){
+            if(this.start<this.pageSize){
+                this.start++;
+                var _self = this;
+                axios.get('./Admin/index/fetchAll/p/'+this.start).then(function(res){
+                    if(res.data.data.length>0){
+                        _self.items = res.data.data;
+                    }
+                })
+            }else {
+                this.start=this.pageSize
+            }
+        },
+        //查询所有数据
      fecthAll: function(){
          var _self=this;
          axios.get('./Admin/index/fetchAll').then(function(res){
-             if(res.data.length>0){
-                 _self.items = res.data;
+             if(res.data.data.length>0) {
+                 _self.items = res.data.data;
+                 _self.page = res.data.totleList;
+                 _self.total = res.data.pageSize;
+                 _self.pageSize = res.data.pagetotal;
                  _self.emptyInfo=""
              }
          })

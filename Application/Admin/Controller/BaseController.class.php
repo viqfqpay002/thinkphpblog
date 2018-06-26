@@ -17,7 +17,7 @@ class BaseController extends Controller{
     public function common(){
         if(!session('uid')||!cookie('uid')){
             echo "<script>alert('请先登录')</script>
-            <script>window.location.href='./login'</script>";
+            <script>window.location.href='./Admin/login'</script>";
                //$this->success('请登录', './Admin/login');
         }else{
           $uid = session('uid')?session('uid'):cookie('uid');
