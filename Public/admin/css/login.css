@@ -1,0 +1,53 @@
+.login{
+    width: 100%;
+    height: 100vh;
+    background: #3CA993;
+    overflow: hidden
+}
+.login .form{
+    width: 320px;
+    text-align: center;
+    margin-top: 10%
+}
+.login .form .top{
+    width: 100%;
+    text-align: center;
+    overflow-x: hidden
+
+}
+.login .form .input_box{
+    width: 310px;
+    margin: 0 auto;
+    padding: 0 5px;
+}
+.login .form .top img{
+    max-width: 100%
+}
+.login .form input[type="text"],.login .form input[type="password"]{
+    width: 95%;
+    height: 50px;
+    line-height: 50px;
+    margin: 10px 0;
+    padding-left: 10px;
+    border: none;
+}
+.login .form button[name="submit"]{
+    width: 95%;
+    background: #348c77;
+    color: #fff;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    border: none;
+    margin-top: 25px;
+    cursor: pointer;
+    font-size: 14px;
+
+}
+.login .form .flagtext{
+    color: #fff;
+    vertical-align: top
+}
+.login .errinfo{
+    color: red
+}

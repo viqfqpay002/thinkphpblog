@@ -1,0 +1,56 @@
+.content{
+   width: 88%;
+   float: left;
+   padding-left: 20px;
+}
+.content .c_header{
+   padding-left: 15px;
+   padding-top: 30px;
+  height: 120px;
+  line-height: 120px;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 1px 1px 10px #ddd;
+}
+
+.content .c_header .search_box{
+    margin-left: 60px;
+}
+.content .c_header .search_box input{
+    width: 300px;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 20px;
+}
+.header_btns{
+    margin-left: 30px;
+}
+.edit_forms{
+  width: 700px;
+  height: 600px;
+  padding: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  z-index: 1001
+}
+.edit_forms .input_box{
+  margin-top: 10px;
+}
+.edit_forms .input_box input[type="text"]{
+  width: 80%;
+  height: 40px;
+}
+.edit_forms .btns {
+  margin-top: 20px;
+}
+.edit_forms .btns input{
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+  background: #00f3;
+  margin-right: 20px;
+  border: none
+}

@@ -1,0 +1,48 @@
+[ 2018-06-14T11:13:25+08:00 ] ::1 /phpdemos/thinkphp/less01.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.042505s ]
+ERR: 无法加载模块:Less01
+
+[ 2018-06-14T11:51:50+08:00 ] ::1 /phpdemos/thinkphp/name/%E4%BD%A0%E5%A5%BD%EF%BC%81
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+ERR: 无法加载模块:Name
+
+[ 2018-06-14T11:52:00+08:00 ] ::1 /phpdemos/thinkphp/name/world
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+ERR: 无法加载模块:Name
+
+[ 2018-06-14T11:52:08+08:00 ] ::1 /phpdemos/thinkphp/index/world
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+ERR: 无法加载模块:World
+
+[ 2018-06-14T11:52:21+08:00 ] ::1 /phpdemos/thinkphp/index/name
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+ERR: 无法加载模块:Name
+
+[ 2018-06-14T11:52:44+08:00 ] ::1 /phpdemos/thinkphp/index/name/body
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+ERR: 无法加载模块:Name
+
+[ 2018-06-14T13:47:34+08:00 ] ::1 /phpdemos/thinkphp/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+ERR: 无法加载模块:Index
+
+[ 2018-06-14T13:48:26+08:00 ] ::1 /phpdemos/thinkphp/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+ERR: 无法加载模块:Index
+

@@ -1,0 +1,88 @@
+.add_form .title{
+    text-align: center;
+}
+.add_form .form{
+    padding-left: 20%;
+    padding-top:10px;
+}
+.add_form .form .input_box{
+   padding: 10px 0;
+}
+.add_form .form .input_box label{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+    width: 50px;
+}
+.add_form .form .input_box input[type="text"]{
+    width: 50%;
+    height: 40px;
+    line-height: 40px;
+}
+.add_form .form .input_box .content{
+   width: 50%;
+   display: inline-block
+}
+.cotnentBox{
+    height: auto !important;
+}
+.input_box input[type="file"]{
+    width: 180px !important;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 4px;
+}
+.input_box  .img_load_show {
+    display: inline-block;
+    vertical-align: middle
+}
+.input_box  .img_load_show  .ul_box  .item{
+    width:50px;
+    height: 50px;
+    padding: 5px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.input_box  .img_load_show  .ul_box  .item:hover{
+    border-color: #333
+}
+.input_box  .img_load_show .ul_box  .item  img{
+    width: auto;
+    max-width: 100%;
+}
+.input_box  .img_load_show .ul_box  .item .icon{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    line-height: 10px;
+    position: absolute;
+    right: 2px;
+    cursor: pointer
+}
+
+.add_form .markBox .markInner{
+    position: absolute;
+    z-index: 1001;
+    width: 500px;
+    height: 500px;
+    left: 50%;
+    top: 50%;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 500px;
+}
+.add_form .form .submit{
+    width: 50%;
+    height: 40px;
+    line-height: 40px;
+    background:#55f4;
+    color: #fff;
+    border: none;
+    margin-left: 50px;
+}
