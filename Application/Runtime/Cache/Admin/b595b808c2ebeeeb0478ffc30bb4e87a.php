@@ -123,7 +123,7 @@
         var _self = this;
          axios.get('./Admin/index/fetchAll/p/'+pageid).then(function(res){
              if(res.data.data.length>0){
-             _self.items = res.data.data;
+              _self.items = res.data.data;
               _self.start = pageid;
              }
          })
@@ -131,28 +131,28 @@
         pageprev:function(){
             if(this.start>1){
                 this.start--;
-                var _self = this;
+            }else {
+                this.start=1;
+            }
+             var _self = this;
                 axios.get('./Admin/index/fetchAll/p/'+this.start).then(function(res){
                     if(res.data.data.length>0){
                         _self.items = res.data.data;
                     }
                 })
-            }else {
-                this.start=1;
-            }
         },
         pagenext:function(){
             if(this.start<this.pageSize){
                 this.start++;
-                var _self = this;
+            }else {
+                this.start=this.pageSize
+            }
+              var _self = this;
                 axios.get('./Admin/index/fetchAll/p/'+this.start).then(function(res){
                     if(res.data.data.length>0){
                         _self.items = res.data.data;
                     }
                 })
-            }else {
-                this.start=this.pageSize
-            }
         },
         //查询所有数据
      fecthAll: function(){

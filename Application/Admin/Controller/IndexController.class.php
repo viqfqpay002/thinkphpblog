@@ -38,7 +38,7 @@ class IndexController extends BaseController
     {
       $model=M('center');
       $count=$model->count();
-      $page=new\Think\Page($count,10);//一页显示五条数据
+      $page=new\Think\Page($count,10);//一页显示10条数据
       $show = $page->show();
 
       $list=$model->limit($page->firstRow,$page->listRows)->select();//
@@ -49,7 +49,7 @@ class IndexController extends BaseController
         // $forms = $data->field('*')->select();
          $arr = array("data"=>$list,"totleList"=>$page->totalRows,"pageSize"=>$page->listRows,"pagetotal"=>$page->totalPages);
          echo json_encode($arr);
-        
+
     }
 
     //删除单项

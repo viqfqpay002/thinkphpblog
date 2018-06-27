@@ -22,7 +22,6 @@ var vm = new Vue({
                  params.append('username', username);
                  params.append('password', password);
                  params.append('flag',flag);
-
             var config = {headers: {'X-Requested-With': 'XMLHttpRequest'}}
             axios.post('./login/user',params,config).then(function(res){
                 if(res.status==200){
@@ -32,7 +31,6 @@ var vm = new Vue({
                     }else {
                         self.errinfo = res.data.data.msg
                     }
-
                 }
             })
         }
