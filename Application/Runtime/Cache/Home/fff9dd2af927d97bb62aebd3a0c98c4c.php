@@ -6,26 +6,37 @@
     <meta name="viewport" width="device-width" content="width=device-width, initial-scale=1">
     <title></title>
     <link href="<?php echo ($public_path); ?>home/css/base.css" rel="stylesheet"/>
-    <link href="<?php echo ($public_path); ?>home/css/blog.css" rel="stylesheet"/>
 </head>
 <body>
 <header class="header">
    <ul class="header_ul" id="header">
        <li class="item"><a href="/" :class="{'active':home?'active':''}">首页</a></li>
-       <li class="item"><a href="/home/blog" :class="{'active':blog?'active':''}">博文分享</a></li>
-       <li class="item"><a href="/home/aboutus" :class="{'active':aboutus?'active':''}">关于我们</a></li>
-       <li class="item" v-show="itemShow==false"><a href="/home/login">登录</a>/<a href="/home/register">注册</a></li>
+       <li class="item"><a href="/home/index/blog" :class="{'active':blog?'active':''}">博文分享</a></li>
+       <li class="item"><a href="/home/index/aboutus" :class="{'active':aboutus?'active':''}">关于我们</a></li>
+       <li class="item" v-show="itemShow==false"><a href="./home/login">登录</a>/<a href="./home/register">注册</a></li>
        <li class="item" v-show="itemShow==true"><a href="javascript:;" v-text="user"></a>/<a href="javascript:;" @click="logout()">退出登录</a></li>
    </ul>
 </header>
 
 
- <article class="contianor" id="index">
-    <section class="banner">
-       <img src=""/>
-    </seciton>
-    <section class="center">
-    </section>
+<?php echo ($sss); ?>
+<link rel="stylesheet" type="text/css" href="<?php echo ($public_path); ?>home/css/blog.css"/>
+ <article class="blogpage" id="blog">
+   <ul class="blog_ul">
+       <li class="item flex" v-for="item in items">
+           <div class="img_box">
+
+           </div>
+           <div class="item_right">
+               <h3 class="title"></h3>
+               <div class="info"></div>
+           </div>
+           <a href="javascript:;">查看详情 > </a>
+       </li>
+   </ul>
+   <div class="page">
+       <ul></ul>
+   </div>
  </article>
 <footer class="footer" id="footer">
   <div class="footer_inner">
@@ -62,5 +73,4 @@
      <script src="<?php echo ($public_path); ?>home/js/common.js"></script>
 </body>
 </html>
-<script>
-</script>
+<script src="<?php echo ($public_path); ?>home/js/blog.js"></script>

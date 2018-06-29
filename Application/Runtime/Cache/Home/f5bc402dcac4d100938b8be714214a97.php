@@ -20,12 +20,33 @@
 </header>
 
 
- <article class="contianor" id="index">
-    <section class="banner">
-       <img src=""/>
-    </seciton>
-    <section class="center">
-    </section>
+ <article class="blogpage" id="blog">
+  <div class="banner">
+     
+  </div>
+   <ul class="blog_ul">
+       <li class="item flex" v-for="item in items">
+           <div class="img_box">
+               <img :src="item.imgurl" alt="主图"/>
+           </div>
+           <div class="item_right">
+               <h3 class="title" v-text="item.title"></h3>
+               <div class="info" v-html="item.content"></div>
+               <span v-text="item.reg_time"></span>
+           </div>
+           <a href="javascript:;" class="link_go" @click="itemHandle(item)">查看详情 > </a>
+       </li>
+       <span v-show="flag==true">暂无数据</span>
+   </ul>
+   <div class="paging flex">
+      <a href="javascript:;" @click="pagePrev()">上一页</a>
+       <ul class="paUl flex">
+         <li class="item" v-for="(item,index) in total">
+           <a href="javascript:;" :class="{'active':item==thispage}" @click="pageitem(item)" v-text="item"></a>
+         </li>
+       </ul>
+      <a href="javascript:;" @click="pageNext()">下一页</a>
+   </div>
  </article>
 <footer class="footer" id="footer">
   <div class="footer_inner">
@@ -62,5 +83,4 @@
      <script src="<?php echo ($public_path); ?>home/js/common.js"></script>
 </body>
 </html>
-<script>
-</script>
+<script src="<?php echo ($public_path); ?>home/js/blog.js"></script>

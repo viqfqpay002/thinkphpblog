@@ -5,16 +5,17 @@
     <meta name="description" content="这是土豆小姐的博客，技术博文分享">
     <meta name="viewport" width="device-width" content="width=device-width, initial-scale=1">
     <title></title>
-    <link href="{$public_path}admin/css/base.css" rel="stylesheet"/>
-    
+    <link href="{$public_path}home/css/base.css" rel="stylesheet"/>
+    <link href="{$public_path}home/css/blog.css" rel="stylesheet"/>
 </head>
 <body>
 <header class="header">
-   <ul class="header_ul">
-       <li class="item"><a href="javascript:;">首页</a></li>
-       <li class="item"><a href="javascript:;">博文分享</a></li>
-       <li class="item"><a href="javascript:;">关于我们</a></li>
-       <li class="item"><a href="javascript:;">登录</a>/<a href="javascript:;">注册</a></li>
+   <ul class="header_ul" id="header">
+       <li class="item"><a href="/" :class="{'active':home?'active':''}">首页</a></li>
+       <li class="item"><a href="/home/blog" :class="{'active':blog?'active':''}">博文分享</a></li>
+       <li class="item"><a href="/home/aboutus" :class="{'active':aboutus?'active':''}">关于我们</a></li>
+       <li class="item" v-show="itemShow==false"><a href="/home/login">登录</a>/<a href="/home/register">注册</a></li>
+       <li class="item" v-show="itemShow==true"><a href="javascript:;" v-text="user"></a>/<a href="javascript:;" @click="logout()">退出登录</a></li>
    </ul>
 </header>
 

@@ -5,8 +5,8 @@
     <meta name="description" content="这是土豆小姐的博客，技术博文分享">
     <meta name="viewport" width="device-width" content="width=device-width, initial-scale=1">
     <title></title>
-    <link href="<?php echo ($public_path); ?>home/css/base.css" rel="stylesheet"/>
-    <link href="<?php echo ($public_path); ?>home/css/blog.css" rel="stylesheet"/>
+    <link href="/Public/home/css/base.css" rel="stylesheet"/>
+    <link href="/Public/home/css/blog.css" rel="stylesheet"/>
 </head>
 <body>
 <header class="header">
@@ -14,7 +14,7 @@
        <li class="item"><a href="/" :class="{'active':home?'active':''}">首页</a></li>
        <li class="item"><a href="/home/blog" :class="{'active':blog?'active':''}">博文分享</a></li>
        <li class="item"><a href="/home/aboutus" :class="{'active':aboutus?'active':''}">关于我们</a></li>
-       <li class="item" v-show="itemShow==false"><a href="/home/login">登录</a>/<a href="/home/register">注册</a></li>
+       <li class="item" v-show="itemShow==false"><a href="./home/login">登录</a>/<a href="./home/register">注册</a></li>
        <li class="item" v-show="itemShow==true"><a href="javascript:;" v-text="user"></a>/<a href="javascript:;" @click="logout()">退出登录</a></li>
    </ul>
 </header>
@@ -58,8 +58,8 @@
 </footer>
      <script src="https://cdn.jsdelivr.net/npm/vue"></script>
      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-     <script src="<?php echo ($public_path); ?>home/js/formdate.js"></script>
-     <script src="<?php echo ($public_path); ?>home/js/common.js"></script>
+     <script src="/Public/home/js/formdate.js"></script>
+     <script src="/Public/home/js/common.js"></script>
 </body>
 </html>
 <script>

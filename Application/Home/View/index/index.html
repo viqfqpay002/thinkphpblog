@@ -1,4 +1,4 @@
-<include file="common/header"/>
+<include file="common/header" />
  <article class="contianor" id="index">
     <section class="banner">
        <img src=""/>
@@ -8,28 +8,4 @@
  </article>
 <include file="common/footer"/>
 <script>
-  let vm = new Vue({
-     el:"#index",
-     data:{
-        user:""
-     },
-     beforeCreate:function(){
-        let uid = sessionStorage.getItem('token')?sessionStorage.getItem('token'):localStorage.getItem('token');
-        if(!uid){
-            window.location.href="./Home/login"
-        }else{
-           var params = new URLSearchParams();
-           let desUid = uid.split("/");
-               params.append('uid',desUid[1]);
-            var config = {headers: {'X-Requested-With': 'XMLHttpRequest'}};
-            axios.post('./home/index/getuid',params,config).then(function(res){
-                if(res.status==200&&res.data.code==1){
-                    this.user = res.data.username
-                }
-            });
-
-        }
-     }
-  })
-
 </script>

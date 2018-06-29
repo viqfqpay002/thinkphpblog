@@ -20,13 +20,6 @@
 </header>
 
 
- <article class="contianor" id="index">
-    <section class="banner">
-       <img src=""/>
-    </seciton>
-    <section class="center">
-    </section>
- </article>
 <footer class="footer" id="footer">
   <div class="footer_inner">
       <h1 class="title">您的意见和建议</h1>
@@ -62,5 +55,3 @@
      <script src="<?php echo ($public_path); ?>home/js/common.js"></script>
 </body>
 </html>
-<script>
-</script>

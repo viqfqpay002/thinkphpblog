@@ -101,6 +101,7 @@
                 this.imgSrc="";
             },
             getformval: function(){
+                if(this.selectVal!==""&&this.title!==""&&this.imgs!==""){
               var params = new URLSearchParams();
                  params.append('cate', this.selectVal);
                  params.append('title', this.title);
@@ -114,6 +115,9 @@
                         window.location.href="/Admin";
                     }
                  })
+             }else {
+                 alert("请完善信息")
+             }
 
             }
         }

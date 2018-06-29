@@ -7,6 +7,7 @@ header,selction,nav{
 }
 html,body{
     width: 100%;
+    height: 100%;
     overflow-x: hidden;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -36,7 +37,7 @@ img{
 ul li,ol li{
     list-style-type: none
 }
-input,select,button{
+input,select,button,textarea{
     outline: none;
      -webkit-tap-highlight-color:rgba(0,0,0,0)
 }
@@ -79,6 +80,9 @@ select{
     display: inline-block;
     padding: 0 20px;
     color: #fff;
+}
+.header .active{
+    color: green
 }
 .slider{
     width: 10%;
@@ -134,3 +138,73 @@ table th,table td{
 .paging .active{
     color: orange;
 }
+.footer{
+    width: 100%;
+    height: auto;
+    background: #e1e1e1;
+    padding: 20px 0;
+}
+.footer .footer_inner{
+   width: 800px;
+   height: 500px;
+   text-align: center;
+   margin: 0 auto;
+}
+.footer .footer_inner .title{
+    font-size: 20px;
+    font-weight: 500;
+    height: 60px;
+    line-height: 60px;
+}
+.footer .footer_inner .form{
+    padding-top: 30px;
+}
+.footer .footer_inner input{
+    width: 300px;
+    height: 60px;
+    line-height: 60px;
+    border: 1px solid #ddd;
+    padding-left: 10px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s
+}
+.footer .footer_inner input:focus,.footer .msgtext:focus{
+    border-color: green
+}
+.footer .msg_box{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.footer .footer_inner .msgtext{
+    width: 610px;
+    height: 200px;
+    padding-left: 10px;
+    transition: all 0.3s
+}
+.footer .btn{
+        width: 300px;
+        height: 40px;
+        background: green;
+        border: none;
+        color: #fff;
+        font-size: 14px;
+        cursor: pointer;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s
+    }
+    .footer .btn:hover{
+        background: #333
+    }
+    .footer .errinfo{
+        color: red
+    }
+    .markBox .markInner{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1001;
+        background: #fff;
+        padding: 30px;
+        color: green
+    }

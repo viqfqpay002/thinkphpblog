@@ -20,13 +20,21 @@
 </header>
 
 
- <article class="contianor" id="index">
-    <section class="banner">
-       <img src=""/>
-    </seciton>
-    <section class="center">
-    </section>
- </article>
+<article class="blogdetail" id="detail">
+    <div class="inner">
+        <div class="url"><a href="/home/blog">博文列表</a>/<a href="javascript:;">博文详情页</a></div>
+      <section class="content">
+        <div class="img_box">
+         <img :src="imgurl" alt="主图" />
+     </div>
+     <div class="content_box">
+        <h3 class="title" v-text="title"></h3>
+        <p>发布时间:{{regTime}}</p>
+        <div class="info" v-html="content"></div>
+    </div>
+</section>
+</div>
+</article>
 <footer class="footer" id="footer">
   <div class="footer_inner">
       <h1 class="title">您的意见和建议</h1>
@@ -62,5 +70,4 @@
      <script src="<?php echo ($public_path); ?>home/js/common.js"></script>
 </body>
 </html>
-<script>
-</script>
+<script src="<?php echo ($public_path); ?>home/js/blogdetail.js"></script>
