@@ -6,7 +6,6 @@
     <meta name="viewport" width="device-width" content="width=device-width, initial-scale=1">
     <title></title>
     <link href="<?php echo ($public_path); ?>home/css/base.css" rel="stylesheet"/>
-    <link href="<?php echo ($public_path); ?>home/css/blog.css" rel="stylesheet"/>
 </head>
 <body>
 <header class="header">
@@ -20,6 +19,7 @@
 </header>
 
 
+<link href="<?php echo ($public_path); ?>home/css/blog.css" rel="stylesheet"/>
 <article class="blogdetail" id="detail">
     <div class="inner">
         <div class="url"><a href="/home/blog">博文列表</a>/<a href="javascript:;">博文详情页</a></div>
@@ -29,8 +29,12 @@
      </div>
      <div class="content_box">
         <h3 class="title" v-text="title"></h3>
-        <p>发布时间:{{regTime}}</p>
+        <p>发布时间:<span v-text="regTime"></span></p>
         <div class="info" v-html="content"></div>
+    </div>
+    <div class="miniHeader">
+        <a class="sure" href="javascript:;"><span class="icon">赞</span><span v-text="zan"></span></a>
+        <a class="fx" href="javascript:;"><span class="icon">分享</span>0<span></span></a>
     </div>
 </section>
 </div>

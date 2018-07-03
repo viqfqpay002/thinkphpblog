@@ -6,7 +6,6 @@
     <meta name="viewport" width="device-width" content="width=device-width, initial-scale=1">
     <title></title>
     <link href="<?php echo ($public_path); ?>home/css/base.css" rel="stylesheet"/>
-    <link href="<?php echo ($public_path); ?>home/css/blog.css" rel="stylesheet"/>
 </head>
 <body>
 <header class="header">
@@ -22,7 +21,7 @@
 
  <article class="contianor" id="index">
     <section class="banner">
-       <img src=""/>
+        我是首页banner
     </seciton>
     <section class="center">
     </section>
@@ -62,5 +61,3 @@
      <script src="<?php echo ($public_path); ?>home/js/common.js"></script>
 </body>
 </html>
-<script>
-</script>

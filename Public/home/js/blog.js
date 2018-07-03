@@ -65,7 +65,7 @@ var blog = new Vue({
      itemHandle:function(item){
       let uid = sessionStorage.getItem('token')?sessionStorage.getItem('token'):localStorage.getItem('token');
        if(uid){
-         location.href=encodeURI("./blog/blogdetail?itemid="+item.id+"&title="+item.title+"&content="+item.content+"&imgurl="+item.imgurl+"&tiem="+item.reg_time);
+         location.href=encodeURI("./blog/blogdetail?itemid="+item.id+"&title="+item.title+"&content="+item.content+"&imgurl="+item.imgurl+"&tiem="+item.reg_time+"&zan="+item.zan);
        }else {
          window.location.href="/home/login";
        }

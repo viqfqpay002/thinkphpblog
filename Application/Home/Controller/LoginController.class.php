@@ -5,7 +5,7 @@
     public function index(){
         $this->display("login");
     }
-    //登录拦截
+    //登录
     public function login(){
         $basepas =base64_decode($_POST["password"]);
         $form["username"]= $_POST["username"];

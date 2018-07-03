@@ -6,7 +6,6 @@
     <meta name="viewport" width="device-width" content="width=device-width, initial-scale=1">
     <title></title>
     <link href="<?php echo ($public_path); ?>home/css/base.css" rel="stylesheet"/>
-    <link href="<?php echo ($public_path); ?>home/css/blog.css" rel="stylesheet"/>
 </head>
 <body>
 <header class="header">
@@ -20,6 +19,33 @@
 </header>
 
 
+<link href="<?php echo ($public_path); ?>home/css/about.css" rel="stylesheet" />
+<article class="about" id="about">
+  <div class="banner">
+     我是banner
+  </div>
+  <div class="about_content" >
+    <h3 class="title">留言信息</h3>
+      <ul class="aboutUl">
+          <li class="item" v-for="item in items">
+              <div class="minHeader">
+                  <span class="user" v-text="item.nick_name"></span>
+                  <span class="time" v-text="item.reg_time"></span>
+              </div>
+              <div class="content"><p v-text="item.messege"></p></div>
+              <a href="javascript:;" class="btn">回复</a>
+          </li>
+      </ul>
+  </div>
+  <!-- 分页 -->
+     <div class="paging flex fl-center">
+        <a href="javascript:;" @click="pageTabHanlder(-1)">上一页</a>
+          <ul class="pagUl flex">
+           <li class="item" v-for="item in total"><a href="javascript:;" @click="pageHanlder(item)" :class="{'active':item==thispage?true:false}">{{item}}</a></li>
+         </ul>
+         <a href="javascript:;" @click="pageTabHanlder(1)">下一页</a>
+      </div>
+</article>
 <footer class="footer" id="footer">
   <div class="footer_inner">
       <h1 class="title">您的意见和建议</h1>
@@ -55,3 +81,4 @@
      <script src="<?php echo ($public_path); ?>home/js/common.js"></script>
 </body>
 </html>
+<script src="<?php echo ($public_path); ?>home/js/aboutus.js"></script>

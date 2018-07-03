@@ -5,7 +5,8 @@ var detail = new Vue({
         imgurl:"",
         content:"",
         id:"",
-        regTime:""
+        regTime:"",
+        zan:""
     },
     //渲染详情页
     created:function(){
@@ -22,6 +23,7 @@ var detail = new Vue({
       this.content = theRequest.content;
       this.imgurl = theRequest.imgurl;
       this.regTime = theRequest.tiem;
+      this.zan = theRequest.zan;
    }
     }
 })

@@ -6,7 +6,6 @@
     <meta name="viewport" width="device-width" content="width=device-width, initial-scale=1">
     <title></title>
     <link href="<?php echo ($public_path); ?>home/css/base.css" rel="stylesheet"/>
-    <link href="<?php echo ($public_path); ?>home/css/blog.css" rel="stylesheet"/>
 </head>
 <body>
 <header class="header">
@@ -20,9 +19,10 @@
 </header>
 
 
+<link href="<?php echo ($public_path); ?>home/css/blog.css" rel="stylesheet"/>
  <article class="blogpage" id="blog">
   <div class="banner">
-     
+    banner区域
   </div>
    <ul class="blog_ul">
        <li class="item flex" v-for="item in items">
@@ -38,7 +38,7 @@
        </li>
        <span v-show="flag==true">暂无数据</span>
    </ul>
-   <div class="paging flex">
+   <div class="paging flex fl-center">
       <a href="javascript:;" @click="pagePrev()">上一页</a>
        <ul class="paUl flex">
          <li class="item" v-for="(item,index) in total">
