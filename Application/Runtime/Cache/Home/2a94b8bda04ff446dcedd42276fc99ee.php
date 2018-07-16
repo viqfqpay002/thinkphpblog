@@ -20,11 +20,38 @@
 
 
  <article class="contianor" id="index">
-    <section class="banner">
-        我是首页banner
-    </seciton>
-    <section class="center">
-    </section>
+   <section class="left">
+      <div class="img_box">
+          <img src=""/>
+      </div>
+      <ul class="ulbox">
+          <li class="item"><a href="javascript:;">所有文章</a></li>
+          <li class="item"><a href="javascript:;">所有留言</a></li>
+          <li class="item"><a href="javascript:;">关于我</a></li>
+      </ul>
+   </section>
+   <section class="slider">
+       <div class="search_box">
+           <input type="text" name="search" placeholder="请输入搜索内容"/>
+           <ul class="ulbox">
+                <li class="item"><a href="javacript:;"></a></li>
+                <li class="item"><a href="javacript:;"></a></li>
+                <li class="item"><a href="javacript:;"></a></li>
+                <li class="item"><a href="javacript:;"></a></li>
+           </ul>
+       </div>
+   </section>
+   <transtion name="fade">
+   <section class="right">
+       <h3 class="title">文章标题 <time>2018-07-06</time></h3>
+       <div class="img_box">
+           <img src="" alt="文章图片">
+       </div>
+       <div class="content">
+          fdasfdasfdsafds fadsafdasfdasfdasfdfdasf
+       </div>
+   </section>
+</transtion>
  </article>
 <footer class="footer" id="footer">
   <div class="footer_inner">

@@ -27,6 +27,8 @@ class IndexController extends BaseController {
       $data = D('msg');
       $data->data($form)->add();
     }
+    //获取所有文章列表
+    
 
 
 }
