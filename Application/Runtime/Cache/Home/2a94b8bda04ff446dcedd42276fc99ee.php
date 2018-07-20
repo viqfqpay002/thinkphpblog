@@ -19,10 +19,11 @@
 </header>
 
 
- <article class="contianor" id="index">
+<link href="<?php echo ($public_path); ?>home/css/home.css" rel="stylesheet" />
+ <article class="continaor home" id="index">
    <section class="left">
       <div class="img_box">
-          <img src=""/>
+          <img src="<?php echo ($public_path); ?>home/images/m2.png"/>
       </div>
       <ul class="ulbox">
           <li class="item"><a href="javascript:;">所有文章</a></li>
@@ -30,14 +31,17 @@
           <li class="item"><a href="javascript:;">关于我</a></li>
       </ul>
    </section>
-   <section class="slider">
+   <section class="textShow">
        <div class="search_box">
-           <input type="text" name="search" placeholder="请输入搜索内容"/>
+           <div class="input_box">
+             <input type="text" name="search" placeholder="请输入搜索内容"/>
+             <span class="btn search_btn">搜索</span>
+           </div>
            <ul class="ulbox">
-                <li class="item"><a href="javacript:;"></a></li>
-                <li class="item"><a href="javacript:;"></a></li>
-                <li class="item"><a href="javacript:;"></a></li>
-                <li class="item"><a href="javacript:;"></a></li>
+                <li class="item"><a href="javacript:;">文章title+id</a></li>
+                <li class="item"><a href="javacript:;">文章title+id</a></li>
+                <li class="item"><a href="javacript:;">文章title+id</a></li>
+                <li class="item"><a href="javacript:;">文章title+id</a></li>
            </ul>
        </div>
    </section>
@@ -88,3 +92,4 @@
      <script src="<?php echo ($public_path); ?>home/js/common.js"></script>
 </body>
 </html>
+<script src="<?php echo ($public_path); ?>home/js/home.js"></script>
