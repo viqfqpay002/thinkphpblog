@@ -27,8 +27,20 @@ class IndexController extends BaseController {
       $data = D('msg');
       $data->data($form)->add();
     }
-    //获取所有文章列表
-    
-
-
+    //搜索文章
+    public function getTitle(){
+      $searchText=I('get.searchText');
+      if(!empty($searchText)){
+         $form['title'] = array('like','%'.$searchText.'%');
+         $data = M('center');
+      $list = $data->where($form)->select();
+      if(count($list)>0){
+         $arr = array("code"=>1,"list"=>$list);
+      }else{
+         $arr = array("code"=>0,"list"=>"没有符合的选项");
+      }
+      echo json_encode($arr);
+       }
+   
+    }
 }

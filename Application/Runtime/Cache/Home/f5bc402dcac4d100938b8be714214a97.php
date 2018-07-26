@@ -12,18 +12,15 @@
    <ul class="header_ul" id="header">
        <li class="item"><a href="/" :class="{'active':home?'active':''}">首页</a></li>
        <li class="item"><a href="/home/blog" :class="{'active':blog?'active':''}">博文分享</a></li>
-       <li class="item"><a href="/home/aboutus" :class="{'active':aboutus?'active':''}">关于我们</a></li>
+       <li class="item"><a href="/home/aboutus" :class="{'active':aboutus?'active':''}">留言信息</a></li>
        <li class="item" v-show="itemShow==false"><a href="/home/login">登录</a>/<a href="/home/register">注册</a></li>
-       <li class="item" v-show="itemShow==true"><a href="javascript:;" v-text="user"></a>/<a href="javascript:;" @click="logout()">退出登录</a></li>
+       <li class="item" v-show="itemShow==true"><a href="javascript:;" v-text="user"></a>/<a href="javascript:;" @click="logout()">退出</a></li>
    </ul>
 </header>
 
 
 <link href="<?php echo ($public_path); ?>home/css/blog.css" rel="stylesheet"/>
  <article class="blogpage" id="blog">
-  <div class="banner">
-    banner区域
-  </div>
    <ul class="blog_ul">
        <li class="item flex" v-for="item in items">
            <div class="img_box">

@@ -58,7 +58,7 @@ select{
 }
 .header{
     width: 100%;
-    height: 120px;
+    height: 70px;
     background:#333;
     line-height: 60px;
     font-size: 18px;
@@ -78,7 +78,7 @@ select{
 }
 .header ul li{
     display: inline-block;
-    padding: 0 20px;
+    padding: 0 9px;
     color: #fff;
 }
 .header .active{
@@ -210,9 +210,29 @@ table th,table td{
         padding: 30px;
         color: green
     }
+ .slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active for below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}   
  .fade-enter-active, .fade-leave-active {
   transition: opacity .5s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
+}
+
+@media screen and (max-width: 1075px) {
+    .header{
+        font-size: 14px;
+    }
+    .header ul{
+        padding: 0 12px ;
+    }
 }

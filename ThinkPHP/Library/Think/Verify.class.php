@@ -24,10 +24,10 @@ class Verify {
         'useNoise'  =>  true,            // 是否添加杂点	
         'imageH'    =>  0,               // 验证码图片高度
         'imageW'    =>  0,               // 验证码图片宽度
-        'length'    =>  5,               // 验证码位数
+        'length'    =>  6,               // 验证码位数
         'fontttf'   =>  '',              // 验证码字体，不设置随机获取
         'bg'        =>  array(243, 251, 254),  // 背景颜色
-        'reset'     =>  true,           // 验证成功后是否重置
+        'reset'     =>  false,           // 验证成功后是否重置
         );
 
     private $_image   = NULL;     // 验证码图片实例

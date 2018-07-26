@@ -23,7 +23,7 @@
              <input type="checkbox" @click="flagHanlder()" v-model="flag"/>
              <span>记住密码?</span>
          </div>
-         <p class="link_go">有无注册?<a href="./register">去注册</a></p>
+         <p class="link_go">有无注册?<a href="/home/register/">去注册</a></p>
     </div>
     <div class="mark" v-show="submitHandler">
         <span class="icon"></span>

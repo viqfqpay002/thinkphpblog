@@ -12,9 +12,9 @@
    <ul class="header_ul" id="header">
        <li class="item"><a href="/" :class="{'active':home?'active':''}">首页</a></li>
        <li class="item"><a href="/home/blog" :class="{'active':blog?'active':''}">博文分享</a></li>
-       <li class="item"><a href="/home/aboutus" :class="{'active':aboutus?'active':''}">关于我们</a></li>
+       <li class="item"><a href="/home/aboutus" :class="{'active':aboutus?'active':''}">留言信息</a></li>
        <li class="item" v-show="itemShow==false"><a href="/home/login">登录</a>/<a href="/home/register">注册</a></li>
-       <li class="item" v-show="itemShow==true"><a href="javascript:;" v-text="user"></a>/<a href="javascript:;" @click="logout()">退出登录</a></li>
+       <li class="item" v-show="itemShow==true"><a href="javascript:;" v-text="user"></a>/<a href="javascript:;" @click="logout()">退出</a></li>
    </ul>
 </header>
 
@@ -23,39 +23,50 @@
  <article class="continaor home" id="index">
    <section class="left">
       <div class="img_box">
-          <img src="<?php echo ($public_path); ?>home/images/m2.png"/>
+          <img src="<?php echo ($public_path); ?>home/images/m2.jpg"/>
       </div>
       <ul class="ulbox">
-          <li class="item"><a href="javascript:;">所有文章</a></li>
-          <li class="item"><a href="javascript:;">所有留言</a></li>
-          <li class="item"><a href="javascript:;">关于我</a></li>
+          <li class="item" @click="sliderHandle('blog')"><a href="javascript:;">所有文章</a></li>
+          <li class="item" @click="sliderHandle('about')"><a href="javascript:;">关于我们</a></li>
       </ul>
    </section>
+   <transtion name="slide-fade">
+    <section v-show="blogShow" class="blogShow">
    <section class="textShow">
        <div class="search_box">
            <div class="input_box">
-             <input type="text" name="search" placeholder="请输入搜索内容"/>
-             <span class="btn search_btn">搜索</span>
+             <input type="text" name="search" placeholder="请输入搜索内容" v-model="searchText" @keyup = "getTitle"/>
+             <span class="btn search_btn" @click="getTitle">搜索</span>
+              <transtion name="fade">
+             <ul class="selectList" v-show='flag'>
+               <li class="item" v-for='(item,index) in selectList'>
+                <a href="javascript:;" v-text="item.title" @click="getItem(item)"></a>
+              </li>
+               <span :key="0" v-if="selectList.length<1">没有符合条件的选项</span>
+             </ul>
+           </transtion>
            </div>
            <ul class="ulbox">
-                <li class="item"><a href="javacript:;">文章title+id</a></li>
-                <li class="item"><a href="javacript:;">文章title+id</a></li>
-                <li class="item"><a href="javacript:;">文章title+id</a></li>
-                <li class="item"><a href="javacript:;">文章title+id</a></li>
+                <li v-for="(item,index) in items" class="item">
+                  <a href="javacript:;" v-text="item.title" @click="itemSelect(item)"></a>
+                </li>
            </ul>
        </div>
    </section>
-   <transtion name="fade">
    <section class="right">
-       <h3 class="title">文章标题 <time>2018-07-06</time></h3>
+       <h3 class="title"><span v-text="title"></span> <time>发布时间:<span v-text="time"></span></time></h3>
        <div class="img_box">
-           <img src="" alt="文章图片">
+           <img :src="img" alt="文章图片"/>
        </div>
-       <div class="content">
-          fdasfdasfdsafds fadsafdasfdasfdasfdfdasf
-       </div>
+       <div class="content" v-html="content"></div>
    </section>
-</transtion>
+ </section>
+      </transtion>
+      <transtion name="slide-fade">
+        <section class="about" v-show="aboutShow">
+           一个90后半路出家的草根尼姑！！，，具体内容稍后......
+        </section>
+      </transtion>
  </article>
 <footer class="footer" id="footer">
   <div class="footer_inner">
