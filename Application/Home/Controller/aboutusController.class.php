@@ -4,7 +4,7 @@ use Think\Controller;
 
 class AboutusController extends BaseController{
     public function index(){
-        $this->display('aboutus');
+        $this->display('Aboutus');
     }
     //获取所有留言信息
     public function getMsgList(){

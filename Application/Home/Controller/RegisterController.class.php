@@ -3,7 +3,7 @@
   use Think\Controller;
   class RegisterController extends BaseController{
      public function index(){
-        $this->display("register");
+        $this->display("Register");
      }
      //验证码
      public function setVegImg(){

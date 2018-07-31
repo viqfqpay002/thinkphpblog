@@ -3,7 +3,7 @@ namespace Home\Controller;
 use Think\Controller;
 class BlogController extends BaseController{
     public function index(){
-        $this->display('blog');
+        $this->display('Blog');
     }
     //查询所有博文
     public function getItem(){

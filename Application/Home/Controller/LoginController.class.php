@@ -3,7 +3,7 @@
   use Think\Controller;
   class LoginController extends BaseController{
     public function index(){
-        $this->display("login");
+        $this->display("Login");
     }
     //登录
     public function login(){
